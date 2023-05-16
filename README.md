@@ -12,7 +12,7 @@ CISbenchmark_manualpoc is a Python script designed to facilitate SSH access to t
 ## Usage
 
 python main.py 
-python main.py -i <IP Address> -u <Username> -p <Password>
+python main.py -i IP_ADDRESS -u USERNAME -p PASSWORD
 
 
 **Note:** 
