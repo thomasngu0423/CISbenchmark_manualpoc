@@ -10,8 +10,6 @@ CISbenchmark_manualpoc is a Python script designed to facilitate SSH access to t
 - Paramiko library
 
 ## Usage
-
-python main.py 
 python main.py -i IP_ADDRESS -u USERNAME -p PASSWORD
 
 
