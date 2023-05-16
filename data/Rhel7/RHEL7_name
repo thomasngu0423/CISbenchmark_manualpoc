@@ -1,0 +1,45 @@
+1.2.1 Ensure GPG keys are configured
+1.2.2 Ensure package manager repositories are configured
+1.2.4 Ensure Red Hat Subscription Manager connection is configured
+1.2.5 Disable the rhnsd Daemon
+1.2.8 Ensure the version of the operating system is an active vendor supported release
+1.3.3 Ensure AIDE is configured to verify ACLs
+1.3.4 Ensure AIDE is configured to verify XATTRS
+1.3.5 Ensure AIDE is configured to use FIPS 140-2
+1.4.5 Ensure version 7.2 or newer booted with a BIOS have a unique name for the grub superusers account
+1.4.6 Ensure version 7.2 or newer booted with UEFI have a unique name for the grub superusers account
+1.6.1.9 Ensure non-privileged users are prevented from executing privileged functions
+1.6.1.10 Ensure system device files are labeled
+1.7.8 Ensure the Standard Mandatory DoD Notice and Consent Banner are configured
+1.8.1 Ensure GNOME Display Manager is removed
+1.8.2 Ensure GDM login banner is configured
+1.8.5 Ensure Standard Mandatory DoD Notice and Consent Banner displayed via a graphical user logon
+1.9 Ensure updates, patches, and additional security software are installed
+1.11 Ensure anti-virus is installed and running
+1.12 Ensure host-based intrusion detection tool is used
+2.2.1.1 Ensure time synchronization is in use
+2.4 Ensure nonessential services are removed or masked
+3.1.1 Disable IPv6
+3.3.3 Ensure network interfaces are not in promiscuous mode
+3.5.1.6 Ensure network interfaces are assigned to appropriate zone
+3.5.1.7 Ensure firewalld drops unnecessary services and ports
+3.5.2.4 Ensure iptables are flushed with nftables
+3.5.2.8 Ensure nftables outbound and established connections are configured
+3.5.3.2.2 Ensure iptables outbound and established connections are configured
+3.5.3.3.2 Ensure ip6tables outbound and established connections are configured
+4.1.2.4 Ensure system notification is sent out when volume is 75% full
+4.1.2.8 Ensure audit logs are stored on a different system
+4.2.1.4 Ensure logging is configured
+4.2.1.6 Ensure remote rsyslog messages are only accepted on designated log hosts
+4.2.3 Ensure logrotate is configured
+4.2.4 Ensure permissions on all logfiles are configured
+5.3.36 Ensure no ".shosts" files exist on the system
+5.3.37 Ensure no "shosts.equiv" files exist on the system
+5.6 Ensure root login is restricted to system console
+6.1.1 Audit system file permissions
+6.1.13 Audit SUID executables
+6.1.14 Audit SGID executables
+6.1.15 Ensure the file permissions ownership and group membership of system files and commands match the vendor values
+6.1.16 Ensure all world-writable directories are owned by root, sys, bin, or an application User Identifier
+6.2.18 Ensure there are no unnecessary accounts
+6.2.26 Ensure local interactive users' dot files executable paths resolve to the users home directory

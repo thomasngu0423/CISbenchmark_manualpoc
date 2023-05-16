@@ -1,0 +1,18 @@
+1.2.1 Ensure GPG keys are configured
+1.2.2 Ensure package manager repositories are configured
+1.9 Ensure updates, patches, and additional security software are installed
+2.2.1.1 Ensure time synchronization is in use
+2.4 Ensure nonessential services are removed or masked
+3.5.1.6 Ensure network interfaces are assigned to appropriate zone
+3.5.1.7 Ensure firewalld drops unnecessary services and ports
+3.5.2.4 Ensure iptables are flushed with nftables
+3.5.2.8 Ensure nftables outbound and established connections are configured 
+3.5.3.2.2 Ensure iptables outbound and established connections are configured
+3.5.3.3.2 Ensure ip6tables outbound and established connections are configured
+4.2.1.4 Ensure logging is configured 
+4.2.1.6 Ensure remote rsyslog messages are only accepted on designated log hosts 
+4.2.3 Ensure permissions on all logfiles are configured
+4.2.4 Ensure logrotate is configured
+5.6 Ensure root login is restricted to system console
+6.1.13 Audit SUID executables
+6.1.14 Audit SGID executables

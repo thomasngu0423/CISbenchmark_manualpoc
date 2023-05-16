@@ -1,0 +1,27 @@
+subscription-manager identity
+grep -r gpgkey /etc/yum.repos.d/* /etc/dnf/dnf.conf
+dnf repolist
+rpm -q gdm
+dnf check-update
+lsof -i -P -n | grep -v "(ESTABLISHED)"
+lsmod | grep ipv6
+find /sys/class/net/* -maxdepth 1 | awk -F"/" '{print $NF}' | while read -r netint; do [ "$netint" != "lo" ] && firewall-cmd --get-active-zones | grep -B1 $netint; done
+firewall-cmd --get-active-zones | awk '!/:/ {print $1}' | while read ZN; do firewall-cmd --list-all --zone=$ZN; done
+iptables -L && ip6tables -L
+nft list ruleset | awk '/hook input/,/}/' | grep -E 'ip protocol (tcp|udp|icmp) ct state'
+iptables -L -v -n
+ip6tables -L -v -n
+augenrules --check
+grep ^\s*ForwardToSyslog /etc/systemd/journald.conf
+ls -l /var/log/
+grep -E '^\s*([^#]+\s+)?action\(([^#]+\s+)?\btarget=\"?[^#"]+\"?\b' /etc/rsyslog.conf /etc/rsyslog.d/*.conf
+rpm -q systemd-journal-remote
+grep -P "^ *URL=|^ *ServerKeyFile=|^ *ServerCertificateFile=|^ *TrustedCertificateFile=" /etc/systemd/journal-upload.conf
+systemctl is-enabled systemd-journal-upload.service
+grep ^\s*ForwardToSyslog /etc/systemd/journald.conf
+cat /etc/systemd/journald.conf
+ls -la /usr/lib/tmpfiles.d/systemd.conf && cat /usr/lib/tmpfiles.d/systemd.conf
+cat /etc/logrotate.conf && cat /etc/logrotate.d/*
+authselect list | grep '^-\s*custom'
+df --local -P | awk '{if (NR!=1) print $6}' | xargs -I '{}' find '{}' -xdev -type f -perm -4000
+df --local -P | awk '{if (NR!=1) print $6}' | xargs -I '{}' find '{}' -xdev -type f -perm -2000

@@ -1,0 +1,29 @@
+grep <each removable media mountpoint> /etc/fstab
+grep <each removable media mountpoint> /etc/fstab
+grep <each removable media mountpoint> /etc/fstab
+yum check-update
+chkconfig --list rhnsd
+yum check-update
+rpm -qVa | awk '$2 != "c" { print $0}'
+uname -r && cat /etc/redhat-release
+grep use-ipv /etc/avahi/avahi-daemon.conf
+grep "^disallow-other-stacks=yes" /etc/avahi/avahi-daemon.conf
+grep "^disable-publishing=yes" /etc/avahi/avahi-daemon.conf && grep "^publish" /etc/avahi/avahi-daemon.conf
+chkconfig --list cups
+yum list dhcp
+ifconfig -a
+grep ipv6 /etc/modprobe.conf
+ls -l /var/log
+grep SYSLOGD_OPTIONS /etc/sysconfig/syslog
+ls -l /var/log/
+grep '$ModLoad' /etc/rsyslog.conf && grep '$InputTCPServerRun' /etc/rsyslog.conf
+grep max_log_file /etc/audit/auditd.conf
+grep space_left_action /etc/audit/auditd.conf && grep action_mail_acct /etc/audit/auditd.conf && grep admin_space_left_action /etc/audit/auditd.conf
+grep '{' /etc/logrotate.d/syslog
+grep "^ClientAliveInterval" /etc/ssh/sshd_config && grep "^ClientAliveCountMax" /etc/ssh/sshd_config
+grep "pam_tally2" /etc/pam.d/system-auth
+grep "^auth" /etc/pam.d/sshd
+cat /etc/securetty
+grep "<Text of Warning banner>" /usr/share/gdm/themes/RHEL/RHEL.xml
+df --local -P | awk '{if (NR!=1) print $6}' | xargs -I '{}' find '{}' -xdev -type f -perm -4000
+df --local -P | awk '{if (NR!=1) print $6}' | xargs -I '{}' find '{}' -xdev -type f -perm -4000

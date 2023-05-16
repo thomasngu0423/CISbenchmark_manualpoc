@@ -1,0 +1,20 @@
+mount
+mount
+mount
+yum repolist
+rpm -q gpg-pubkey --qf '%{name}-%{version}-%{release} --> %{summary}\n'
+subscription-manager identity
+[[ -n $(grep noexec[0-9]*=off /proc/cmdline) || -z $(grep -E -i ' (pae|nx) ' /proc/cpuinfo) || -n $(grep '\sNX\s.*\sprotection:\s' /var/log/dmesg | grep -v active) ]] && echo "NX Protection is not active"
+rpm -q chrony && rpm -q ntp
+iw list | sudo ip link show up
+modprobe -n -v dccp & lsmod | grep dccp
+sudo iptables -L -v -n
+ss -4tuln && sudo iptables -L INPUT -v -n
+sudo ip6tables -L -v -n
+ss -6tuln && sudo ip6tables -L INPUT -v -n
+ls -l /var/log/
+grep '$ModLoad imtcp' /etc/rsyslog.conf /etc/rsyslog.d/*.conf & grep '$InputTCPServerRun' /etc/rsyslog.conf /etc/rsyslog.d/*.conf
+cat /etc/logrotate.conf && cat /etc/logrotate.d/*
+cat /etc/securetty
+df --local -P | awk {'if (NR!=1) print $6'} | xargs -I '{}' find '{}' -xdev -type f -perm -4000
+df --local -P | awk {'if (NR!=1) print $6'} | xargs -I '{}' find '{}' -xdev -type f -perm -2000

@@ -1,0 +1,18 @@
+rpm -q gpg-pubkey --qf '%{name}-%{version}-%{release} --> %{summary}\n'
+yum repolist
+yum check-update
+rpm -q chrony ntp
+ss -a -n | grep -v "ESTAB"
+find /sys/class/net/* -maxdepth 1 | awk -F"/" '{print $NF}' | while read -r netint; do [ "$netint" != "lo" ] && firewall-cmd --get-active-zones | grep -B1 $netint; done
+firewall-cmd --get-active-zones | awk '!/:/ {print $1}' | while read ZN; do firewall-cmd --list-all --zone=$ZN; done
+iptables -L && sudo ip6tables -L
+nft list ruleset | awk '/hook input/,/}/' | grep -E 'ip protocol (tcp|udp|icmp) ct state'
+iptables -L -v -n
+ip6tables -L -v -n
+ls -l /var/log/
+grep '$ModLoad imtcp' /etc/rsyslog.conf /etc/rsyslog.d/*.conf && grep '$InputTCPServerRun' /etc/rsyslog.conf /etc/rsyslog.d/*.conf
+find /var/log -type f -perm /g+wx,o+rwx -exec ls -l {} \;
+cat /etc/logrotate.conf && cat /etc/logrotate.d/*
+cat /etc/securetty
+df --local -P | awk '{if (NR!=1) print $6}' | xargs -I '{}' find '{}' -xdev -type f -perm -4000
+df --local -P | awk '{if (NR!=1) print $6}' | xargs -I '{}' find '{}' -xdev -type f -perm -2000

@@ -1,0 +1,29 @@
+1.1.11 Add nodev Option to Removable Media Partitions
+1.1.12 Add noexec Option to Removable Media Partitions
+1.1.13 Add nosuid Option to Removable Media Partitions
+1.2.1 Configure Connection to the RHN RPM Repositories
+1.2.4 Disable the rhnsd Daemon
+1.2.6 Obtain Software Package Updates with yum
+1.2.7 Verify Package Integrity Using RPM
+1.7 Use the Latest OS Release
+3.1.2 Service Only via Required Protocol
+3.1.4 Prevent Other Programs from Using Avahi’s Port
+3.1.6 Restrict Published Information (if publishing is required)
+3.4 Disable Print Server - CUPS
+3.5 Remove DHCP Server
+4.3.1 Deactivate Wireless Interfaces
+4.4.2 Disable IPv6
+5.1.1 Configure /etc/syslog.conf
+5.1.4 Accept Remote syslog Messages Only on Designated Log Hosts
+5.2.3 Configure /etc/rsyslog.conf
+5.2.6 Accept Remote rsyslog Messages Only on Designated Log Hosts
+5.3.1.1 Configure Audit Log Storage Size
+5.3.1.2 Disable System on Audit Log Full
+5.4 Configure logrotate
+6.2.12 Set Idle Timeout Interval for User Login
+6.3.2 Set Lockout for Failed Password Attempts
+6.3.3 Use pam_deny.so to Deny Services
+6.4 Restrict root Login to System Console
+8.2 Set GNOME Warning Banner
+9.1.13 Find SUID System Executable
+9.1.14 Find SGID System Executables

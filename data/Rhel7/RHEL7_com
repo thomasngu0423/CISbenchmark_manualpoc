@@ -1,0 +1,45 @@
+rpm -q gpg-pubkey --qf '%{name}-%{version}-%{release} --> %{summary}\n'
+yum repolist
+subscription-manager identity
+systemctl is-enabled rhnsd
+cat /etc/redhat-release
+find / -name aide.conf
+find / -name aide.conf
+find / -name aide.conf
+grep -iw "superusers" /boot/grub2/grub.cfg
+grep -iw "superusers" /boot/efi/EFI/redhat/grub.cfg
+semanage login -l | more
+find /dev -context *:device_t:* \( -type c -o -type b \) -printf "%p %Z\n" && find /dev  context *:unlabeled_t:* \( -type c -o -type b \) -printf "%p %Z\n"
+grep -i banner /etc/ssh/sshd_config
+rpm -q gdm
+find /etc/dconf/db/local.d/ -type f -exec grep 'banner-message-' {} \;
+grep banner-message-text /etc/dconf/db/local.d/*
+yum check-update
+echo 'Please ssh and verify on your own'
+rpm -qa | grep MFEhiplsm && ps -ef | grep -i “hipclient”
+rpm -q chrony ntp
+lsof -i -P -n | grep -v "(ESTABLISHED)"
+grep "^\s*linux" /boot/grub2/grub.cfg | grep -v ipv6.disable=1
+ip link | grep -i promisc
+find /sys/class/net/* -maxdepth 1 | awk -F"/" '{print $NF}' | while read -r netint; do [ "$netint" != "lo" ] && firewall-cmd --get-active-zones | grep -B1 $netint; done
+firewall-cmd --get-active-zones | awk '!/:/ {print $1}' | while read ZN; do firewall-cmd --list-all --zone=$ZN; done
+iptables -L && ip6tables -L
+nft list ruleset | awk '/hook input/,/}/' | grep -E 'ip protocol (tcp|udp|icmp) ct state'
+iptables -L -v -n
+ip6tables -L -v -n
+grep -iw log_file /etc/audit/auditd.conf && df -h /var/log/audit/ && grep -iw space_left /etc/audit/auditd.conf
+grep -i remote_server /etc/audisp/audisp-remote.conf
+ls -l /var/log/
+grep '$ModLoad imtcp' /etc/rsyslog.conf /etc/rsyslog.d/*.conf && grep '$InputTCPServerRun' /etc/rsyslog.conf /etc/rsyslog.d/*.conf
+cat /etc/logrotate.conf && cat /etc/logrotate.d/*
+find /var/log -type f -perm /g+wx,o+rwx -exec ls -l {} \;
+find / -name '*.shosts'
+find / -name shosts.equiv
+cat /etc/securetty
+rpm -Va --nomtime --nosize --nomd5 --nolinkto > <filename> | grep -vw c
+df --local -P | awk '{if (NR!=1) print $6}' | xargs -I '{}' find '{}' -xdev -type f -perm -4000
+df --local -P | awk '{if (NR!=1) print $6}' | xargs -I '{}' find '{}' -xdev -type f -perm -2000
+for i in `rpm -Va | egrep '^.{1}M|^.{5}U|^.{6}G' | cut -d " " -f 4,5`;do for j in `rpm -qf $i`;do rpm -ql $j --dump | cut -d " " -f 1,5,6,7 | grep $i;done;done
+find [PART] -xdev -type d -perm -0002 -uid +999 -print
+more /etc/passwd
+grep -i path /home/smithj/.*

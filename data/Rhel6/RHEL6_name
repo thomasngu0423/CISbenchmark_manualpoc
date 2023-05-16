@@ -1,0 +1,20 @@
+1.1.18 Ensure nodev option set on removable media partitions
+1.1.19 Ensure nosuid option set on removable media partitions
+1.1.20 Ensure noexec option set on removable media partitions
+1.2.1 Ensure package manager repositories are configured
+1.2.3 Ensure GPG keys are configured
+1.2.4 Ensure Red Hat Network or Subscription Manager connection is configured
+1.5.2 Ensure XD/NX support is enabled
+2.2.1.1 Ensure time synchronization is in use
+3.1.2 Ensure wireless interfaces are disabled
+3.5.1 Ensure DCCP is disabled
+3.6.2.3 Ensure IPv4 outbound and established connections are configured
+3.6.2.4 Ensure IPv4 firewall rules exist for all open ports
+3.6.3.3 Ensure IPv6 outbound and established connections are configured
+3.6.3.4 Ensure IPv6 firewall rules exist for all open ports
+4.2.1.3 Ensure logging is configured
+4.2.1.6 Ensure remote rsyslog messages are only accepted on designated log hosts
+4.2.3 Ensure logrotate is configured
+5.6 Ensure root login is restricted to system console
+6.1.13 Audit SUID executables
+6.1.14 Audit SGID executables

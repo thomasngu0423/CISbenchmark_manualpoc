@@ -1,0 +1,4 @@
+sudo -l
+ls
+cat /etc/passwd
+cat /etc/shadow
