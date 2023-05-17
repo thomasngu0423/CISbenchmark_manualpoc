@@ -8,6 +8,8 @@ CISbenchmark_manualpoc is a Python script designed to facilitate SSH access to t
 
    ```bash
    git clone https://github.com/thomasngu0423/CISbenchmark_manualpoc.git
+   ```
+   ```bash
    cd CISbenchmark_manualpoc
 
 2. Run the script:
