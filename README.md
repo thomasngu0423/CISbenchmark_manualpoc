@@ -25,8 +25,8 @@ CISbenchmark_manualpoc is a Python script designed to facilitate SSH access to t
 
 ## Supported OS
 
-    Redhat: 6-9
-    Centos: 6-8
+- Redhat: 6-9
+- Centos: 6-8
 
 ## Dependencies
 
