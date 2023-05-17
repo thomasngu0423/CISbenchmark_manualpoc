@@ -22,6 +22,12 @@ CISbenchmark_manualpoc is a Python script designed to facilitate SSH access to t
 3. If the error persists, manually SSH into the target server and retrieve the manual POC data.
 4. The results will be output to the `manual` folder.
 
+
+## Supported OS
+
+    Redhat: 6-9
+    Centos: 6-8
+
 ## Dependencies
 
     Python 3.x
